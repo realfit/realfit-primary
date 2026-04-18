@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REALFIT&#174; &#8212; The Standards for Fitness</title>
+<meta name="description" content="Golf has a handicap. Chess has a rating. Finance has a credit score. Fitness has nothing. REALFIT is building the trusted infrastructure that changes that.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0e0c;--ink2:#2a2927;--muted:#6b6860;--faint:#a09d98;
+  --rule:#d8d5cf;--rule2:#eceae5;--bg:#faf9f7;--surface:#fff;
+  --blue:#185EA5;--teal:#1D9E75;--amber:#b8860b;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--ink2);background:var(--bg)}
+a{color:inherit;text-decoration:none}
+header{background:var(--surface);border-bottom:1px solid var(--rule);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:baseline;gap:2px}
+.logo-r{font-size:14px;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
+.logo-f{font-size:14px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.logo-sup{font-size:9px;color:var(--faint);vertical-align:super}
+.logo-tag{font-size:11px;color:var(--faint);letter-spacing:.06em;margin-left:10px;padding-left:10px;border-left:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-size:13px;color:var(--muted);letter-spacing:.02em;transition:color .15s}
+nav a:hover{color:var(--ink)}
+.nav-cta{padding:7px 18px;border:1px solid var(--ink);border-radius:2px;font-size:13px;font-weight:500;letter-spacing:.04em;transition:all .15s}
+.nav-cta:hover{background:var(--ink);color:#fff}
+/* PROVOCATION */
+.prov{background:var(--ink);padding:72px 48px 68px}
+.prov-inner{max-width:900px;margin:0 auto}
+.prov-row{display:flex;flex-wrap:wrap;gap:0;margin-bottom:52px;border:1px solid rgba(255,255,255,.07)}
+.prov-item{flex:1;min-width:120px;padding:18px 22px;border-right:1px solid rgba(255,255,255,.07)}
+.prov-item:last-child{border-right:none}
+.prov-sport{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:5px}
+.prov-name{font-family:'EB Garamond',serif;font-size:19px;color:rgba(255,255,255,.75);line-height:1.15}
+.prov-item.gap .prov-sport{color:rgba(232,240,42,.55)}
+.prov-item.gap .prov-name{color:#e8f02a;font-size:21px}
+.prov h1{font-family:'EB Garamond',serif;font-size:clamp(34px,5vw,62px);font-weight:400;color:#fff;line-height:1.05;margin-bottom:24px;max-width:800px}
+.prov h1 em{font-style:italic;color:rgba(255,255,255,.45)}
+.prov-body{font-size:17px;color:rgba(255,255,255,.5);line-height:1.8;max-width:600px;font-weight:300;margin-bottom:40px}
+.btn-yel{padding:12px 28px;background:#e8f02a;color:var(--ink);border-radius:2px;font-size:14px;font-weight:600;letter-spacing:.04em;display:inline-block;transition:opacity .15s}
+.btn-yel:hover{opacity:.88}
+.btn-gw{padding:12px 28px;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.75);border-radius:2px;font-size:14px;letter-spacing:.04em;display:inline-block;transition:all .15s}
+.btn-gw:hover{border-color:rgba(255,255,255,.55);color:#fff}
+/* SECTIONS */
+.sec{padding:80px 48px;border-bottom:1px solid var(--rule)}
+.sec-inner{max-width:900px;margin:0 auto}
+.kicker{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+.kicker.t{color:var(--teal)}
+.sec h2{font-family:'EB Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:20px}
+.lead{font-size:17px;color:var(--muted);line-height:1.75;font-weight:300;margin-bottom:52px;max-width:640px}
+/* FIVE PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:0}
+.pillar{background:var(--surface);padding:24px 18px}
+.pil-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:1px;margin-bottom:10px}
+.pil-tag.auth{background:#e6f0fb;color:#0c447c}
+.pil-tag.lang{background:#e1f5ee;color:#085041}
+.pil-tag.tool{background:#faeeda;color:#633806}
+.pil-tag.lib{background:#eeedfe;color:#26215c}
+.pil-tag.mkt{background:#fbeaf0;color:#4b1528}
+.pillar h3{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:7px;line-height:1.3}
+.pillar p{font-size:12px;color:var(--muted);line-height:1.65}
+/* ECOSYSTEM */
+.eco{display:flex;flex-direction:column;gap:2px;margin-bottom:0}
+.eco-tier{background:var(--surface);border:1px solid var(--rule);display:grid;grid-template-columns:180px 1fr;align-items:stretch;transition:border-color .15s}
+.eco-tier:hover{border-color:var(--blue)}
+.eco-tier.ind1{margin-left:28px}
+.eco-tier.ind2{margin-left:56px}
+.eco-tier.dash{background:var(--bg);border-style:dashed}
+.eco-label{padding:18px 22px;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center;gap:5px}
+.eco-tag{font-size:9px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:2px 7px;border-radius:1px;display:inline-block;width:fit-content}
+.tag-gov{background:#e6f0fb;color:#0c447c}
+.tag-inf{background:#e1f5ee;color:#085041}
+.tag-std{background:#faeeda;color:#633806}
+.tag-app{background:#eeedfe;color:#26215c}
+.tag-fut{background:var(--rule2);color:var(--faint)}
+.eco-name{font-size:14px;font-weight:500;color:var(--ink)}
+.eco-tier.dash .eco-name{color:var(--faint)}
+.eco-body{padding:18px 26px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+.eco-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.eco-tier.dash .eco-desc{color:var(--faint)}
+.eco-url{font-size:11px;color:var(--blue);letter-spacing:.04em;margin-top:3px}
+/* WHO */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.who-cell{background:var(--surface);padding:28px 32px}
+.who-tag{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.who-cell h3{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.who-cell p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:11px;color:var(--faint);padding:3px 8px;border:1px solid var(--rule2)}
+/* VISION */
+.vision{background:var(--ink);padding:80px 48px;border-bottom:1px solid #2a2927}
+.vision-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.vision h2{font-family:'EB Garamond',serif;font-size:clamp(26px,3.5vw,40px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:20px}
+.vision-body p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;font-weight:300;margin-bottom:16px}
+.vision-body p:last-child{margin-bottom:0}
+.vision-body em{font-style:normal;color:rgba(255,255,255,.8)}
+.built-label{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+.built-item{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:13px}
+.built-item:last-child{border-bottom:none;padding-bottom:0}
+.bdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:6px}
+.built-item h4{font-size:14px;font-weight:500;color:#fff;margin-bottom:3px}
+.built-item p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6}
+.built-item a{color:rgba(255,255,255,.45);text-decoration:underline;text-decoration-color:rgba(255,255,255,.18);transition:color .15s}
+.built-item a:hover{color:rgba(255,255,255,.8)}
+/* ROADMAP */
+.road-items{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.road-item{background:var(--surface);padding:24px 22px}
+.road-item.live{background:var(--bg)}
+.road-status{font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
+.road-status.s-live{color:var(--teal)}
+.road-status.s-next{color:var(--blue)}
+.road-status.s-future{color:var(--faint)}
+.road-item h3{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.road-item p{font-size:13px;color:var(--muted);line-height:1.65}
+/* CERT */
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:0}
+.cert-cell{background:var(--surface);padding:32px 36px}
+.cert-cell.dark{background:var(--ink)}
+.cert-cell .ck{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.cert-cell .ck{color:var(--faint)}
+.cert-cell.dark .ck{color:rgba(255,255,255,.3)}
+.cert-cell h3{font-family:'EB Garamond',serif;font-size:21px;font-weight:400;line-height:1.2;margin-bottom:12px}
+.cert-cell h3{color:var(--ink)}
+.cert-cell.dark h3{color:#fff}
+.cert-cell p{font-size:14px;line-height:1.75}
+.cert-cell p{color:var(--muted)}
+.cert-cell.dark p{color:rgba(255,255,255,.5)}
+.cert-cell a{color:var(--blue)}
+.cert-cell.dark a{color:#e8f02a}
+/* FITDAT */
+.fitdat-strip{background:#0a0f1a;padding:72px 48px;border-bottom:1px solid #1a2030}
+.fitdat-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.fitdat-strip h2{font-family:'EB Garamond',serif;font-size:clamp(24px,3vw,38px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:14px}
+.fitdat-strip p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:24px}
+.btn-ow{padding:11px 24px;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:2px;font-size:13px;letter-spacing:.04em;display:inline-block;transition:all .15s}
+.btn-ow:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+.spec-list{display:flex;flex-direction:column;gap:9px}
+.spec-item{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.55)}
+.spec-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--teal);flex-shrink:0}
+/* CTA */
+.dual-cta{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.cta-cell{background:var(--surface);padding:40px 44px}
+.cta-cell:first-child{background:var(--ink)}
+.cta-kicker{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.cta-kicker{color:var(--faint)}
+.cta-cell:first-child .cta-kicker{color:rgba(255,255,255,.3)}
+.cta-cell h3{font-family:'EB Garamond',serif;font-size:26px;font-weight:400;line-height:1.2;margin-bottom:12px}
+.cta-cell h3{color:var(--ink)}
+.cta-cell:first-child h3{color:#fff}
+.cta-cell p{font-size:14px;line-height:1.7;margin-bottom:24px}
+.cta-cell p{color:var(--muted)}
+.cta-cell:first-child p{color:rgba(255,255,255,.5)}
+.btn-p{padding:12px 26px;background:var(--blue);color:#fff;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:.04em;display:inline-block;transition:opacity .15s}
+.btn-p:hover{opacity:.88}
+.btn-o{padding:12px 26px;border:1px solid var(--rule);color:var(--ink2);border-radius:2px;font-size:13px;letter-spacing:.04em;display:inline-block;transition:all .15s}
+.btn-o:hover{border-color:var(--ink)}
+footer{background:var(--surface);border-top:1px solid var(--rule);padding:36px 48px}
+.ft-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-brand{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.ft-links{display:flex;gap:22px;flex-wrap:wrap}
+.ft-links a{font-size:12px;color:var(--faint);transition:color .15s}
+.ft-links a:hover{color:var(--ink)}
+.ft-copy{font-size:11px;color:var(--faint)}
+@media(max-width:768px){
+  header{padding:0 20px}
+  nav a:not(.nav-cta){display:none}
+  .prov{padding:48px 20px 44px}
+  .prov-row{display:none}
+  .sec{padding:56px 20px}
+  .pillars{grid-template-columns:1fr 1fr}
+  .eco-tier{grid-template-columns:1fr}.eco-label{border-right:none;border-bottom:1px solid var(--rule)}
+  .eco-tier.ind1{margin-left:12px}.eco-tier.ind2{margin-left:24px}
+  .who-grid{grid-template-columns:1fr}
+  .vision{padding:56px 20px}.vision-inner{grid-template-columns:1fr;gap:40px}
+  .road-items{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+  .fitdat-strip{padding:56px 20px}.fitdat-inner{grid-template-columns:1fr;gap:32px}
+  .dual-cta{grid-template-columns:1fr}
+  footer{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-r">Real</span><span class="logo-f">FIT</span><span class="logo-sup">&reg;</span>
+    <span class="logo-tag">The standards for fitness</span>
+  </div>
+  <nav>
+    <a href="#what">What we are</a>
+    <a href="#who">Who benefits</a>
+    <a href="#vision">Our vision</a>
+    <a href="#certification">Certification</a>
+    <a href="https://fitdat.com">FITDAT</a>
+    <a href="https://realfitscore.com" class="nav-cta">Estimate my score</a>
+  </nav>
+</header>
+
+<!-- PROVOCATION -->
+<section class="prov">
+  <div class="prov-inner">
+    <div class="prov-row">
+      <div class="prov-item">
+        <div class="prov-sport">Golf</div>
+        <div class="prov-name">Handicap Index</div>
+      </div>
+      <div class="prov-item">
+        <div class="prov-sport">Chess</div>
+        <div class="prov-name">Elo Rating</div>
+      </div>
+      <div class="prov-item">
+        <div class="prov-sport">Bowling</div>
+        <div class="prov-name">Average Score</div>
+      </div>
+      <div class="prov-item">
+        <div class="prov-sport">Tennis</div>
+        <div class="prov-name">UTR / WTN</div>
+      </div>
+      <div class="prov-item">
+        <div class="prov-sport">Finance</div>
+        <div class="prov-name">Credit Score</div>
+      </div>
+      <div class="prov-item gap">
+        <div class="prov-sport">Fitness</div>
+        <div class="prov-name">&#8212;</div>
+      </div>
+    </div>
+    <h1>Every discipline has a standard.<br><em>Fitness still doesn&rsquo;t.</em></h1>
+    <p class="prov-body">Golf has a handicap. Chess has an Elo rating. Finance has a credit score. Fitness &mdash; the single greatest indicator of overall health &mdash; has no universal standard, no trusted authority, and no common language. REALFIT is building that infrastructure.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="#what" class="btn-yel">See what we&rsquo;re building</a>
+      <a href="https://realfitscore.com" class="btn-gw">Estimate my score &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT REALFIT IS -->
+<section class="sec" id="what" style="background:var(--surface)">
+  <div class="sec-inner">
+    <div class="kicker t">What REALFIT is</div>
+    <h2>Not a fitness app.<br>An institution.</h2>
+    <p class="lead">REALFIT is five things simultaneously &mdash; and that&rsquo;s what makes it different from anything that exists in fitness today. Independent of any program or sport. Focused entirely on the quality and comparability of fitness data.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pil-tag auth">Authority</div>
+        <h3>The trusted standard-setter</h3>
+        <p>Definitions, procedures, measuring techniques. The governing body that makes fitness data comparable and defensible.</p>
+      </div>
+      <div class="pillar">
+        <div class="pil-tag lang">Language</div>
+        <h3>A common language for fitness</h3>
+        <p>FITDAT &mdash; the open language of fitness testing. Tests, score sets, standards. The vocabulary every platform can share.</p>
+      </div>
+      <div class="pillar">
+        <div class="pil-tag tool">Toolkit</div>
+        <h3>Tools for designers &amp; developers</h3>
+        <p>Build, publish, and distribute fitness tests. API plugins, website templates, private-label options. A replacement for Excel and PDFs.</p>
+      </div>
+      <div class="pillar">
+        <div class="pil-tag lib">Library</div>
+        <h3>A public standards library</h3>
+        <p>Searchable by sport, objective, and population. Military, combine, and sport-specific standards. Always current, always linked to sources.</p>
+      </div>
+      <div class="pillar">
+        <div class="pil-tag mkt">Marketplace</div>
+        <h3>A marketplace for fitness testing</h3>
+        <p>Build from the library. Share your score sets. The best standards rise to the top. Like Wix &mdash; but for fitness testing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="sec" id="ecosystem" style="background:var(--bg)">
+  <div class="sec-inner">
+    <div class="kicker">The platform</div>
+    <h2>One authority. One language.<br>Infinite applications.</h2>
+    <p class="lead">REALFIT governs the standard. FITDAT provides the open infrastructure. Applications &mdash; built by REALFIT and by the world &mdash; sit on top.</p>
+    <div class="eco">
+      <div class="eco-tier">
+        <div class="eco-label"><span class="eco-tag tag-gov">Authority</span><span class="eco-name">REALFIT&reg;</span></div>
+        <div class="eco-body"><div class="eco-desc">Standards body &middot; Certification &middot; Official credentialing &middot; Community &middot; Research partnerships</div><div class="eco-url">realfit.com</div></div>
+      </div>
+      <div class="eco-tier ind1">
+        <div class="eco-label"><span class="eco-tag tag-inf">Open language</span><span class="eco-name">FITDAT&reg;</span></div>
+        <div class="eco-body"><div class="eco-desc">The language of fitness &mdash; open test library, protocol definitions, scoring specifications, developer toolkit, standards marketplace</div><div class="eco-url">fitdat.com</div></div>
+      </div>
+      <div class="eco-tier ind2">
+        <div class="eco-label"><span class="eco-tag tag-std">Flagship standard</span><span class="eco-name">REALFIT Absolute Score&trade;</span></div>
+        <div class="eco-body"><div class="eco-desc">Version 1 of the universal fitness benchmark &mdash; 13 tests, 0&ndash;1,000 scale, fully open methodology. The fitness equivalent of a credit score, built first to prove the model.</div><div class="eco-url">realfitscore.com &middot; fitdat.com/scoring-spec.html</div></div>
+      </div>
+      <div class="eco-tier ind2">
+        <div class="eco-label"><span class="eco-tag tag-app">Apps</span><span class="eco-name">REALFIT iOS app &amp; web tools</span></div>
+        <div class="eco-body"><div class="eco-desc">The full experience &mdash; certified scores, history, QR athlete comparison, analytics, PDF reports &mdash; plus web estimator and interactive sample apps at ScoreMyFitness.com</div></div>
+      </div>
+      <div class="eco-tier ind2 dash">
+        <div class="eco-label"><span class="eco-tag tag-fut">Coming</span><span class="eco-name">Occupational standards</span></div>
+        <div class="eco-body"><div class="eco-desc">Fire service, law enforcement, military &mdash; certifiable fitness standards for every first responder context, built on FITDAT, governed by REALFIT</div></div>
+      </div>
+      <div class="eco-tier ind2 dash">
+        <div class="eco-label"><span class="eco-tag tag-fut">Coming</span><span class="eco-name">Sport &amp; performance standards</span></div>
+        <div class="eco-body"><div class="eco-desc">Team sports, combines, academic programs &mdash; position-specific and sport-specific score sets with comparable methodology across programs</div></div>
+      </div>
+      <div class="eco-tier ind2 dash">
+        <div class="eco-label"><span class="eco-tag tag-fut">Platform</span><span class="eco-name">Third-party certified apps</span></div>
+        <div class="eco-body"><div class="eco-desc">Gyms, wearables, equipment makers, trainers, insurers &mdash; any organization can build on FITDAT and earn REALFIT certification</div><div class="eco-url"><a href="https://fitdat.com/architecture.html" style="color:var(--blue)">Build on FITDAT &rarr;</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO BENEFITS -->
+<section class="sec" id="who" style="background:var(--surface)">
+  <div class="sec-inner">
+    <div class="kicker">Who benefits</div>
+    <h2>Every stakeholder in fitness.<br>For the first time, connected.</h2>
+    <p class="lead">A common language and a trusted authority creates value for everyone &mdash; not just athletes. The same infrastructure that gives an individual their fitness score gives a fire department a comparable candidate assessment and gives a researcher a dataset that actually means something.</p>
+    <div class="who-grid">
+      <div class="who-cell">
+        <div class="who-tag">Already testing</div>
+        <h3>Military, fire, law enforcement &amp; pro sports</h3>
+        <p>You&rsquo;re already testing &mdash; but your data sits in a silo. REALFIT makes your standards comparable, certifiable, and portable. A fire candidate&rsquo;s result means the same thing in every department.</p>
+        <div class="chips"><span class="chip">Military</span><span class="chip">Fire service</span><span class="chip">Law enforcement</span><span class="chip">NFL combine</span><span class="chip">Pro sports</span></div>
+      </div>
+      <div class="who-cell">
+        <div class="who-tag">Promoting testing</div>
+        <h3>Gyms, trainers &amp; workout programs</h3>
+        <p>Give your clients a meaningful assessment &mdash; not just a body fat percentage. Build your own branded score set on FITDAT. Track progress over time. Differentiate your service on a standard clients can trust.</p>
+        <div class="chips"><span class="chip">Gym chains</span><span class="chip">Personal trainers</span><span class="chip">CrossFit</span><span class="chip">Workout programs</span><span class="chip">Corporate wellness</span></div>
+      </div>
+      <div class="who-cell">
+        <div class="who-tag">Individuals</div>
+        <h3>Athletes &amp; anyone who wants to know</h3>
+        <p>A single number that tells you honestly where you stand &mdash; not "how much do you bench?" or "how fast can you run a 5K?" but a real, comparable, certified measure of physical fitness. The fitness equivalent of knowing your credit score.</p>
+        <div class="chips"><span class="chip">Recreational athletes</span><span class="chip">Competitive athletes</span><span class="chip">Health-conscious individuals</span></div>
+      </div>
+      <div class="who-cell">
+        <div class="who-tag">Broader ecosystem</div>
+        <h3>Developers, wearables &amp; insurers</h3>
+        <p>Fitness data that&rsquo;s trusted, standardized, and certifiable creates entirely new possibilities &mdash; from wearables that feed directly into a certified score to insurers who can finally reward fitness objectively. The long-term vision is a world where your fitness score is as consequential as your credit score.</p>
+        <div class="chips"><span class="chip">Wearable devices</span><span class="chip">Fitness apps</span><span class="chip">Health insurers</span><span class="chip">Equipment makers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="vision" id="vision">
+  <div class="vision-inner">
+    <div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:18px">Why we built this</div>
+      <h2>The world needs a fitness standard as trusted as a credit score.</h2>
+      <div class="vision-body">
+        <p>My health insurance premium is based on my age. Not my fitness level. Not my health history. Just my age. Meanwhile, <em>a credit score &mdash; built on open, standardized methodology &mdash; determines my mortgage rate.</em> We built an entire financial system around a trusted number for money. We&rsquo;ve never done it for the body.</p>
+        <p>Golf has a handicap. Bowling has an average. Chess has an Elo rating. Tennis is actively fighting over its standard right now &mdash; UTR versus WTN. <em>Fitness, the single greatest indicator of overall health, has nothing.</em></p>
+        <p>REALFIT is the institution that closes that gap. Not by telling people how to train &mdash; but by creating the common language, the open infrastructure, and the trusted certification framework that makes fitness data mean something for the first time.</p>
+        <p>The REALFIT Absolute Score is Version 1. The proof of concept. <em>The destination is a world where every fitness standard &mdash; for any population, any sport, any occupation &mdash; is built on open, trusted, certifiable infrastructure.</em></p>
+      </div>
+    </div>
+    <div>
+      <div class="built-label">What we&rsquo;ve built so far</div>
+      <div class="built-item">
+        <div class="bdot" style="background:var(--teal)"></div>
+        <div><h4>FITDAT &mdash; the open language</h4><p>14 test specifications, full protocol definitions, open scoring methodology &mdash; <a href="https://fitdat.com">fitdat.com</a></p></div>
+      </div>
+      <div class="built-item">
+        <div class="bdot" style="background:#EF9F27"></div>
+        <div><h4>REALFIT iOS app</h4><p>Certified scores, history, QR athlete comparison, analytics, PDF reports</p></div>
+      </div>
+      <div class="built-item">
+        <div class="bdot" style="background:#534AB7"></div>
+        <div><h4>REALFITSCORE.com</h4><p>Free web estimator &mdash; all 13 tests, no login &mdash; <a href="https://realfitscore.com">try it</a></p></div>
+      </div>
+      <div class="built-item">
+        <div class="bdot" style="background:#D4537E"></div>
+        <div><h4>ScoreMyFitness.com</h4><p>Interactive sample apps demonstrating FITDAT for developers &mdash; <a href="https://scoremyfitness.com">explore</a></p></div>
+      </div>
+      <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:12px">Coming next</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">RF Pro &mdash; individual access to the full library<br>RF Official &mdash; certification training &amp; credentialing<br>Occupational standards &mdash; fire, military, law enforcement<br>FITDAT marketplace &mdash; share &amp; discover score sets</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATION -->
+<section class="sec" id="certification" style="background:var(--bg)">
+  <div class="sec-inner">
+    <div class="kicker">Certification</div>
+    <h2>Anyone can calculate a score.<br>Only REALFIT can certify one.</h2>
+    <p class="lead">The methodology is completely open. The scoring tables are published. Any developer can implement it. Transparency is the foundation of trust. But a certified result is different &mdash; and that difference is everything for institutional use.</p>
+    <div class="cert-grid">
+      <div class="cert-cell">
+        <div class="ck">Self-reported estimate</div>
+        <h3>Anyone, anywhere, any time.</h3>
+        <p>Enter your own results at <a href="https://realfitscore.com">realfitscore.com</a> and see your estimated REALFIT Absolute Score instantly. Useful for self-assessment and goal-setting. Not valid for institutional, competitive, or professional use.</p>
+      </div>
+      <div class="cert-cell dark">
+        <div class="ck">Certified result</div>
+        <h3>Administered. Verified. Credentialed.</h3>
+        <p>A REALFIT Certified Official administers every test in person, according to FITDAT protocol. The certified score carries a verified badge, is valid for 90 days, and is the only result recognised for institutional use. <a href="mailto:officials@realfit.com">Enquire about Official training &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FITDAT STRIP -->
+<div class="fitdat-strip">
+  <div class="fitdat-inner">
+    <div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:18px">For developers &amp; builders</div>
+      <h2>The language of fitness is open.</h2>
+      <p>FITDAT publishes every test definition, protocol, and scoring methodology openly &mdash; so any developer, institution, or organization can build on the same trusted foundation without reinventing it.</p>
+      <a href="https://fitdat.com" class="btn-ow">Explore FITDAT &rarr;</a>
+    </div>
+    <div class="spec-list">
+      <div class="spec-item">14 test specifications with full protocol definitions</div>
+      <div class="spec-item">Open REALFIT Absolute Score methodology</div>
+      <div class="spec-item">Score set framework &mdash; build your own standard</div>
+      <div class="spec-item">REALFIT Certified Application program</div>
+      <div class="spec-item">API access for wearables and equipment makers</div>
+      <div class="spec-item">Standards marketplace &mdash; share and discover</div>
+    </div>
+  </div>
+</div>
+
+<!-- DUAL CTA -->
+<div class="dual-cta">
+  <div class="cta-cell">
+    <div class="cta-kicker">For individuals</div>
+    <h3>See where you actually stand.</h3>
+    <p>Enter your results across all 13 tests and get your estimated REALFIT Absolute Score. No account. No login. The fitness equivalent of checking your credit score.</p>
+    <a href="https://realfitscore.com" class="btn-yel">Estimate my score</a>
+  </div>
+  <div class="cta-cell">
+    <div class="cta-kicker">For institutions &amp; developers</div>
+    <h3>Build on the open standard.</h3>
+    <p>FITDAT publishes every definition, protocol, and scoring specification openly. Build certified applications, custom score sets, and institutional tools on the same foundation that powers REALFIT.</p>
+    <a href="https://fitdat.com" class="btn-p">Explore FITDAT</a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-brand">REALFIT&reg; &mdash; The standards for fitness</div>
+    <div class="ft-links">
+      <a href="https://fitdat.com">FITDAT</a>
+      <a href="https://realfitscore.com">Score estimator</a>
+      <a href="https://scoremyfitness.com">ScoreMyFitness</a>
+      <a href="https://scoremy40.com">ScoreMy40</a>
+      <a href="https://fitdat.com/scoring-spec.html">Scoring spec</a>
+      <a href="mailto:officials@realfit.com">Official credentialing</a>
+      <a href="mailto:hello@realfit.com">Contact</a>
+    </div>
+    <div class="ft-copy">&copy; 2026 REALFIT&reg; &middot; FITDAT&reg; &middot; All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
