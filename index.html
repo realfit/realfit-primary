@@ -14,7 +14,30 @@
   --rule:#dedad4;--bg:#f8f7f4;--surface:#fff;
   --blue:#185EA5;--teal:#1D9E75;--amber:#b8860b;
   --dark:#08101e;
+  --dark-section:#08101e;
+  --dark-card:#0d1829;
+  --dark-routing:#0f0e0c;
+  --dark-path:#161819;
+  --dark-band:#040c18;
+  --dark-eco:#0a0908;
 }
+[data-theme="dark"]{
+  --ink:#f0ede8;--muted:#9a9790;--faint:#5a5855;
+  --rule:#2a2825;--bg:#141210;--surface:#1c1a18;
+  --blue:#5a9fd4;--teal:#2aba8a;
+  --dark-section:#1c1a18;
+  --dark-card:#242220;
+  --dark-routing:#1c1a18;
+  --dark-path:#242220;
+  --dark-band:#141210;
+  --dark-eco:#0f0e0c;
+}
+.theme-toggle{background:none;border:1px solid var(--rule);border-radius:2px;padding:5px 10px;cursor:pointer;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;transition:all .15s;flex-shrink:0}
+.theme-toggle:hover{border-color:var(--ink);color:var(--ink)}
+.theme-toggle svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-sun,.icon-moon{display:none}
+[data-theme="dark"] .icon-moon{display:block}
+:root:not([data-theme="dark"]) .icon-sun{display:block}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);width:100%;min-height:100vh}
 a{color:var(--blue);text-decoration:none}
@@ -80,18 +103,18 @@ h2{font-size:clamp(22px,3vw,32px);font-weight:400;line-height:1.15;color:var(--i
 .built-desc{font-size:15px;color:var(--muted);line-height:1.75}
 
 /* CONVICTION — dark */
-.conviction{background:var(--dark);padding:64px 48px;width:100%}
+.conviction{background:var(--dark-section);padding:64px 48px;width:100%}
 .conv-inner{max-width:640px;margin:0 auto}
 .conv-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(29,158,117,.7);margin-bottom:20px}
 .conv-inner blockquote{font-size:clamp(18px,2.5vw,24px);font-weight:300;font-style:italic;line-height:1.55;color:#fff;margin-bottom:20px;padding-left:20px;border-left:2px solid var(--teal)}
 .conv-inner p{font-size:15px;color:rgba(255,255,255,.45);line-height:1.85;margin-bottom:0}
 
 /* ROUTING */
-.routing{background:var(--ink);padding:52px 48px;width:100%}
+.routing{background:var(--dark-routing);padding:52px 48px;width:100%}
 .routing-inner{max-width:760px;margin:0 auto}
 .r-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.22);text-align:center;margin-bottom:20px}
 .path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.path{background:#161819;padding:22px 20px;display:block;transition:background .15s;text-decoration:none!important}
+.path{background:var(--dark-path);padding:22px 20px;display:block;transition:background .15s;text-decoration:none!important}
 .path:hover{background:#1d2023}
 .path-tag{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;display:block}
 .path h3{font-size:14px;font-weight:500;color:#fff;margin-bottom:7px;line-height:1.3}
@@ -99,7 +122,7 @@ h2{font-size:clamp(22px,3vw,32px);font-weight:400;line-height:1.15;color:var(--i
 .path-go{font-size:12px;font-weight:500}
 
 /* FITDAT BAND */
-.fd-band{background:#040c18;padding:44px 48px;width:100%}
+.fd-band{background:var(--dark-band);padding:44px 48px;width:100%}
 .fd-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
 .fd-inner h2{font-size:clamp(18px,2.2vw,24px);font-weight:400;color:#fff;line-height:1.2;margin-bottom:6px}
 .fd-inner p{font-size:14px;color:rgba(255,255,255,.38);line-height:1.75;max-width:400px}
@@ -116,7 +139,7 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:24px 4
 .ft-copy{font-size:11px;color:var(--faint)}
 
 /* ECO FOOTER */
-.eco-footer{background:#0a0908;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;width:100%}
+.eco-footer{background:var(--dark-eco);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;width:100%}
 .ef-label{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.18)}
 .ef-links{display:flex;gap:16px;flex-wrap:wrap}
 .ef-links a{font-size:12px;color:rgba(255,255,255,.32);text-decoration:none;transition:color .15s}
@@ -147,6 +170,10 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:24px 4
     <a href="#what-we-built">What we&#8217;ve built</a>
     <a href="https://fitdat.com">FITDAT</a>
     <a href="https://realfitscore.com" class="nav-cta">Estimate my score</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
   </nav>
 </header>
 
@@ -305,22 +332,22 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:24px 4
     <div class="conv-label" style="text-align:center;margin-bottom:16px">What standards make possible</div>
     <h2 style="font-family:'EB Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:36px;text-align:center">When fitness finally has a common language,<br>everything changes.</h2>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.08)">
-      <div style="background:#0d1829;padding:32px 28px">
+      <div style="background:var(--dark-card);padding:32px 28px">
         <div style="font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">For individuals</div>
         <div style="font-size:17px;font-weight:400;color:#fff;line-height:1.4;margin-bottom:12px">A number that actually means something.</div>
         <div style="font-size:14px;color:rgba(255,255,255,.45);line-height:1.75">A baseline, a history, a way to track progress over time and compare honestly across any context. Not a relative score within one gym or program. A real, portable measure.</div>
       </div>
-      <div style="background:#0d1829;padding:32px 28px">
+      <div style="background:var(--dark-card);padding:32px 28px">
         <div style="font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">For organizations</div>
         <div style="font-size:17px;font-weight:400;color:#fff;line-height:1.4;margin-bottom:12px">Data that compounds.</div>
         <div style="font-size:14px;color:rgba(255,255,255,.45);line-height:1.75">A fire department result that means the same thing in every jurisdiction. A combine score comparable across years and programs. A corporate wellness program with numbers an insurer can actually use.</div>
       </div>
-      <div style="background:#0d1829;padding:32px 28px">
+      <div style="background:var(--dark-card);padding:32px 28px">
         <div style="font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">For the community</div>
         <div style="font-size:17px;font-weight:400;color:#fff;line-height:1.4;margin-bottom:12px">A rising bar, not a minimum threshold.</div>
         <div style="font-size:14px;color:rgba(255,255,255,.45);line-height:1.75">A shared framework that celebrates what humans are capable of at the top end &#8212; and gives everyone an honest picture of where they stand, from the person just starting out to the elite athlete.</div>
       </div>
-      <div style="background:#0d1829;padding:32px 28px">
+      <div style="background:var(--dark-card);padding:32px 28px">
         <div style="font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">For the field</div>
         <div style="font-size:17px;font-weight:400;color:#fff;line-height:1.4;margin-bottom:12px">Infrastructure it has never had.</div>
         <div style="font-size:14px;color:rgba(255,255,255,.45);line-height:1.75">Open, governed, and trusted. The same foundation that made financial data actionable at scale &#8212; applied for the first time to fitness.</div>
@@ -397,5 +424,18 @@ footer{background:var(--surface);border-top:1px solid var(--rule);padding:24px 4
   <span class="ef-copy">&copy; 2026 REALFIT&#174;</span>
 </div>
 
+<script>
+function toggleTheme(){
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? '' : 'dark');
+  localStorage.setItem('rf-theme', isDark ? 'light' : 'dark');
+}
+// Restore preference on load
+(function(){
+  const saved = localStorage.getItem('rf-theme');
+  if(saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+})();
+</script>
 </body>
 </html>
