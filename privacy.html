@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Privacy Policy &mdash; REALFIT&#174;</title>
+<meta name="description" content="REALFIT privacy policy. How we collect, use, and safeguard your information when you use REALFIT services and the REALFIT Score app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0e0c;--muted:#5a5855;--faint:#9a9790;
+  --rule:#dedad4;--bg:#f8f7f4;--surface:#fff;
+  --blue:#185EA5;--teal:#185EA5;--amber:#b8860b;
+  --dark:#08101e;
+  --dark-section:#08101e;
+  --dark-card:#0d1829;
+  --dark-routing:#0f0e0c;
+  --dark-path:#161819;
+  --dark-band:#040c18;
+  --dark-eco:#0a0908;
+}
+[data-theme="dark"]{
+  --ink:#f0ede8;--muted:#9a9790;--faint:#5a5855;
+  --rule:#2a2825;--bg:#141210;--surface:#1c1a18;
+  --blue:#5a9fd4;--teal:#5a9fd4;
+  --dark-section:#1c1a18;
+  --dark-card:#242220;
+  --dark-routing:#1c1a18;
+  --dark-path:#242220;
+  --dark-band:#141210;
+  --dark-eco:#0f0e0c;
+}
+.theme-toggle{background:none;border:1px solid var(--rule);border-radius:2px;padding:5px 10px;cursor:pointer;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;transition:all .15s;flex-shrink:0}
+.theme-toggle:hover{border-color:var(--ink);color:var(--ink)}
+.theme-toggle svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-sun,.icon-moon{display:none}
+[data-theme="dark"] .icon-moon{display:block}
+:root:not([data-theme="dark"]) .icon-sun{display:block}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);width:100%;min-height:100vh}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* HEADER — identical to realfit.com */
+header{background:var(--surface);border-bottom:1px solid var(--rule);padding:0 48px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;width:100%}
+.logo{display:flex;align-items:center;text-decoration:none!important}
+
+/* HERO */
+.hero{background:var(--surface);border-bottom:1px solid var(--rule);padding:72px 48px 56px;width:100%}
+.hero-inner{max-width:760px;margin:0 auto}
+.hero-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+h1{font-size:clamp(28px,4vw,42px);font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em}
+.hero-meta{font-size:14px;color:var(--faint);letter-spacing:.02em}
+
+/* SECTIONS */
+.sec{padding:56px 48px;border-bottom:1px solid var(--rule);width:100%}
+.sec:last-of-type{border-bottom:none}
+.sec-inner{max-width:760px;margin:0 auto}
+h2{font-size:clamp(20px,2.6vw,26px);font-weight:500;line-height:1.3;color:var(--ink);margin-bottom:16px;letter-spacing:-.005em}
+h2 .num{color:var(--faint);font-weight:300;margin-right:12px}
+.body{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.body:last-child{margin-bottom:0}
+.body strong{font-weight:500;color:var(--ink)}
+.body a{color:var(--blue)}
+
+/* Lists within sections */
+ul.policy-list{list-style:none;margin-top:4px;margin-bottom:16px;padding-left:0}
+ul.policy-list li{font-size:15px;color:var(--muted);line-height:1.8;padding-left:20px;position:relative;margin-bottom:6px}
+ul.policy-list li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:1px;background:var(--rule)}
+ul.policy-list li strong{font-weight:500;color:var(--ink)}
+
+/* Subheading within a section (for data categories) */
+h3.sub{font-size:14px;font-weight:500;color:var(--ink);margin-top:20px;margin-bottom:8px;letter-spacing:.01em}
+h3.sub:first-child{margin-top:0}
+
+/* Contact block */
+.contact-block{background:var(--surface);border:1px solid var(--rule);padding:24px 28px;margin-top:8px;border-radius:2px}
+.contact-block .contact-line{font-size:15px;color:var(--muted);line-height:1.75}
+.contact-block .contact-line strong{color:var(--ink);font-weight:500}
+.contact-block a{color:var(--blue)}
+
+/* Back-to-site link */
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin-bottom:24px;transition:color .15s}
+.back-link:hover{color:var(--ink);text-decoration:none}
+.back-link::before{content:'\2190';}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--rule);padding:24px 48px;width:100%}
+.ft{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.ft-brand{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.ft-links{display:flex;gap:18px;flex-wrap:wrap}
+.ft-links a{font-size:12px;color:var(--faint);text-decoration:none}
+.ft-links a:hover{color:var(--ink)}
+.ft-copy{font-size:11px;color:var(--faint)}
+
+@media(max-width:768px){
+  header{padding:0 20px}
+  .hero,.sec{padding-left:20px;padding-right:20px}
+  footer{padding:22px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo" style="gap:14px">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAAAwCAYAAAASL5ZAAAA9zUlEQVR4nO29ebxkV3Xf+11r73Oq6t7b6lYPGpEERsLGYsZgEGjkAfk4cZ4dz8TGicHEsfM82zE2NsYzYGPHTvxJ7IcDCdgh2OZ5IAlgoZaQBEYIYawBhDBIaOi5+3bfe6vqnL3Xen/sc6rq3u4WAiS/l4T1+VTf6qpT++xp7bXWbw1H+DL9b0Z60idVVeHuuDuWEceDINHxFsinaqSKlbWpRTBcV2B0EdhSJISEIeAjRMF9THbwx2xAW1vW+WfCbLzS/8XxsZKOGDhU20EGi5Nij1lPt5KtQzoMdgLcQRJIBrH5qJzyHX33v0z/m9FmhhURbrrpJjUzyzlXOXkbQlAzq0IITtnACai69wLEqqqmz7/ssohGCNv5rt94G8fD9tZRUspV1ODqIP6YbzJdGJR3/Wspt0YkEEJFdkNjxMzSwBPDdHT4H1/78/6tr3t9TlJlIHTj7Bn+5JPtUSLvGHCUVzlzej/b8nGqPHW1xrNmEHPpjxxz6rrmta99LTkl4mPVqS/T/xzk7hJjjPfcc0+rqq2bCLAMnOg2VtVdat37CZAvuOACIDpxmxLO9M+F3dxxeCJt00TQLIaGEMxd3DoRYY8+50rXr/4g2Tw0oCgI5V1Uh2xLntrx0mD75Mk/+2a5dv8xNxEBRsAac9n2GEra0tXtyfzJauxp1lhO61Q+VdNMmalyXohl37lzJzlnB77MsF8mOHHiRBtC8JxzJYQfdPcrQwgNRVKNur+9tP114CMxxgqtDKvzy17/O1z70HEOhu1QxReJhB8OhFVccA31jAMeG1G7Bnz3wv93Ab9XVEzm6qR7L39XNPAfjgp/+sBxQeqdKy78GrCbwt015WDKzPnjUWVeEUFE0Nb2HZ4c/oFhrnbE5I8TT0PTfAQ4AFYDoyjcd/ToUX7lV36Fn371q7/MsF8miDE6EGKM5+L6/e7+FapK27a9itmrjGPgV4CQc464AtuwuB3EiTJoU7J/oMPqJanNEmOFmxWRJYb46XrwJdEtbJauXwl8A2wy/coVAgLm8C4p1izudg7C93VXOa6Lvwo8hhp9lrh3HJYGa3E5rqTjbx8693b3u19dngn+FnP7d6pKSgn4soT9355CCDGEkEQku/tyUL2waZqJqg4Hg4GwGf74FPBxADMboxEkkKTCJSMihLp+fE4JRDZSakA6lfqxA532bvn/11A0AtjMbN79k4EPlI8MJDyNXv90MnMbNlEY9hHT1gPJT8PqPcDXuvz1mow2NhjmVuQed/93gj5Xg3xnQCsR+Yi7ccYZK7z2ta8FHoZh+3s9dvP8eej/8w7MaHHT/i9HOWeZTqeVu7fufklKKYYQLOfcS1gom1yAm7v/hxij4cmJkDyRzLDgO5328lBp48aSJevQ2ccOdhLnw1s+ejZzuxvoGWeGIR0CPkuvIJs/D5gCg9LR3F+ogBTz9pHRVpTqdHp0Dzol5JaJ1tVYB9sS+t6Mf1Id3LnO8We7+x0ptYQQZr/5/4GE7Ydp5T/y9wirPzwtMurW4+N/GSbeu3dvu7q6Gt19FEJ4XlFzUSCFEAJlnL1t9ylgG2IncmogViADDk0hSUAkXJgt7SQ1SWLd2Y2P7TS5czfz9RDgCae9snx/G3CiG6MAF3Zja5lL15bC9Kfr/OIeLceBf+GnkqN/N6X2l/7jb169+x2v/726jtam5r5AJOd8M7jGqAK4iODuRDktem3z3my6SSFd+Flv33/hHRZ8dmZkEAtIKDe29EW0+KjT4kb4X4RpN5+HL3rRi3jPe96j4/F4DFyDWLnIVd1d3D2rqljOhBBuRL05//zzuOqFz4d4Dt/462/mxvsz0zDERZ+nRKrhSJvUQljcJArzuSz+ikcO5vRuJSjScAg47nfj/jlE+rae3L0WVkv7u/Yg0vvL5ziw0l3fo8y+8H4LU1oZgGxac8e1FahMut+79vDuhO7g6/re/xURCcAtIuFTZnV693+7lmeurHBmZbg7VVURRDEzQwpUpyKYyMNLWEeLSiMBtC5c2qkIlg3MZsPpDYQviKTYQLgHaAaiObuUWzjdepvPdH6YqxOPAslp3p+KnM2+uUUm/p+Qaed0ww038MADD+QQwgpwfvfxQsQBWaBW5xiwT1UbgCYDKoxlhXFwkjru/nQzXzjqZ1NjCEKRQr1t2NBt4IfpXu+T6SWgsNmu/DQiGws3ejKw7TRt9dfcvbBiTwcez8m2au8q6geytY+L+2CwaQPIpmsqmR80kfnYDbgH1w3cedy55/HWH30lkvaf3OtysM3otAzrKGG4Qs416BL4AKSad3Pr1H1RpCBRsGnEjiWPycgTPDfgTs4nI4uLNsWjyLwzijGSc+7b3ypN+9O378RpnesL/eyb+aJUfVUlhEBKCVXddHgVjXUOYix+d7q2AMwMVe2ZVUQkAV8FnIHr4kbtx6zAx4Cjbdt60+ZOMxqQrG83Lxv+FPAyf669OpyRTv0U1sDupmziptxjyxT6Sf/r5zwDobOYNoCLRPRmx6fu3jdyMVvs1y3triL2GQTtJGwG7gSWtrDkfPGK9F6lqNrnz+bFT1p6Qfg4WAGunKlg3umiFa41RTuYABcANwmtDdQ4YyDguZsqwXEE6dw/3ZrhmNmpGdapICyT8xkw2sPLf+23GVvNOBt1iIQQEAfrFwboVKkviMocKkNb4yt3evvMJ+yWkU4INiFi4JkYI5PJBBHhqquu2sSwXwgg8HAkItxwww2z9lSVnAvq+YIXvKBnFJGyeK6qwczc3c3dXVX5wAc+MGOWHobv2hER4corr9S+XVV1wM0+/5z114jI7CC57rrrEBFinC9fb+P011x55ZWnbat/34+xo+cCZ1CkACyohQ6YcFsoth+uoRze9QrT7LgI7pyH+4W4u5nJwoZWzAWVjNgbcX4HSOIM1AmZvCDNlM6psohM28L7TRqpqqAhMk09KMwlDzOVEfgMzme6TZuAO9TlGqAuDKzdZMznyUvvW+Bnge+jqNERZohyC9TlMOJfgN0JDASyOlFm3mczXHP3uwxYbU39pHO3p//yo99jBEdyz6wBx3Gfhyj2oz61hNVlqC/iG37jrTyURuw9NObEeIyoEirIuSmL7TA/Ib+YSC4DaX1bXp2uTxu2n6G+nFYZpg1q7fGnsrHMjOuuu44QAldccQUwd0BDkTJ79+5lMBiQcybnTFVVfD6m6Df5kSNHWFtbI5bwNdydwWDAzTffTNu2dEwnIQRPKeUbb7xRc84aYy3uzpEjR1lbWyOEMOtvVVXknH15edmvvfY6DyFw1VVXYebShRFstodOQXVd8/73F7OrZ8bV1VXG43HHtDUATdOUVVBlMBhw7bXXMRgMZv1wdy6//PJZOyKC6qblf9pCP3ouNsS0W9vPuTshBMwBGYFH1qaJLDU4FwG7QOcb3x3QhuLwrIA7cDuqDsHiVNw9FruqLJKfvFazXeWb95lQdPWUc+FcWAKe9fCzaXcqPqETL+qyKq4uzoYu3KPYA4aJk0TIZTS7gTM7P+2ipKi7tu8DPgF+QpwT0UTUUcFNvVdrN4dlD2zCTnHIxyE1aKhIOXVd762SzXNyGoYd8O2/9RZueqBlNSzJWLYHHy5FoM54TaQmEovxrFsm9AsgMbAptOnwJKxPc6zPIhGL3VrWsc3pQFWFcUrJ9u/fT1VV3HzzzbzwhS8st3WfR46o8tnPfrYEsZtR1/XnVZsXv+/h8769tm156KGHMDNCCNx0001+2WWXyc033xwefPBBcs4uEqzTeb1XWXs1tm9zMpnIdDpVEfEbb7yx05GtH8OsA6dSWd2dgwcPMh6PqeuanPOsjyklUtq8oL3k7Bl6MBjQNA2qyt69e7nqqqtmqvWCdN1OseVmK9Op1+Z4hdpxXD4mIpx33tlcdvk1wA5e9cZ/w/uPTmipxISvhLCMmOEusz0tXokoLraGc58g1Y7K0wVLudk5iohrcWCexmm5yEizMYriBI42xj2rU9bKFOym2KSnWmRQlSpWnxA313Zddg6Es7eNWK4qHcaq62p3uSira1MePL7Boew5E5aAr+ha6+ONZ/4qVcVVbvOcVxWpdlRiFywF3zVShBzU7VQaqC/lij12wAkbRjBSm+YAzmlogWH7Bks/Niywbs5YzNuYE6I/Lc6rRGQnBaWD2aroI4CJTz49BSFbjVv1Kcnyj0Kyj9cug0pkJhnrup6EEP7EjNcBn0ophf379+frr7+eK664QgCvqor3vve98cCBA5iZAE9W1SeY2bjra6KoMmuUE/FGij9Ogcrd/xHwJOCrgbOAvwPuAP62bdtb3H3s7jzwwAP1tddeqw8++GADmJlJjFFV9auApwCPd/cLgF3unoAjInIUuDWl9FFg30MPPeTu7ktLS9xww42o0knd+fx88IMfJKXEwYMHxd1DSklVtWnbNlKkyCXA2ar6OJEQgD3dBO+n2HcJuBu4tW3bB3POG4Dt27ePvXv3Yma8+MUv7g8IoWz2S+ixQ3f1nor9ediFvwkzFVwhDJjkwPEm0WoOEL4WFcciuHeJOg5m6gEn26eAv6up7aKV7Lf97LdCuz9g0Rfs5kdGUoEsQ7WbS37x97hn1dzdL2Wuxs85XAMaFbK1bdt+FMu2Sxq9bLfyxz/6XU7eELxdcD9ZaVv3cPUv/VtWj2WmrOwCnthd0KvDPYCQ3T14Sp/GodI6XbQS5LbXfKfR7KOYrafyeGjxhNgUfIp4iyiY9Zp215cttEnCOhFkAGEbq1bThliEuNkfAt/hsOGGdkhxKr9XeUR4ip8ySwskEDSeqLSqPJt7TjNpWTaUhel0+k/N7MWj0ejKppnc3bYtZjZy93EvCc0sTyYTr+s6ppTeJCJXp5QIIczVu2JvZApzTYAfB14GnEsJeE8dAHMNzLI+bhSRXzWzDwMcPHjQRcRE5NwY41XAD5rZRcDZzNHk3n85cfclgBDC/cB/NrP/ADywvr7O+vp6Ov/8c8XMvLdRY4w0TcP+/ftp29a7/uwQkVcC/4wSerfN3QWYutugH5+I6ILGsAEcb9v2z6qq+hN3/xtVPXz//ffnqqp497vfzX333YcWvfhxFFDFKZJV3N2RIhmc8IALR7dt28bll78AfAgSaUPNNGdQIirPBC1wzszypd/WCdXP1RKOxmlruwcKzT6CHMQaE3E9Cb6cjaJIpn5UUpySI9DtvPyNv8l7Dhx04i6ngGbOyfLJ3MXdbDWKfrAeRp6wveKPf/zboH0I2tU8Y9heCupOqFb6/4duzi8E1img1sxfG6uqSm2LBL1T2yZuD5YfV6vd1jy0QvugY+MNOWWG4gy3dABxm2l2fgrToCfdhGDrEOIuvvM3/yOf3L/KBopr+FaQ7+imYohIjXvGPXawZD71K29+zY3thZdlJGXcomAaFFw0u0g2PGe3nM1EQxiL6lkp559y1EKsQcK410zchRAqL+4tDarxq0WCgCISVkVCFgkqEkQkfEQkPEMk3CwSfk4kXCISVrrvqrn/ShU0gv4foNeKhKd37UxB/7G7/FXO/gdtSl+TzfaY+zSbNdksZbPkYOZetymlbhedn3J+dcr5VnP/FhExM4v79x/U66//AKCEUPG+913LoUNHhmbEuh6GEKrvD6H6qGr8t6rxmapxm2pMImEsEgSRhIj3ry5UIYvqksMeRF5l7u9OOb8lm53RH4Rra2vaoatT4OkF1S32mbsj6ouS6i6AwWg432ui5FiTBSWGXaAXYtLJngUVNlthGZG/wVob2jqx3YAwIluFo7iYb31R/vYcODs8xIFQAUPWU6S1AqOKyEv6Db+IbQDJywbfZzlN2vV1ttfiNEeEdAy8Ac8oTvBOLa5GfNNv/D53HTFaGWTg2bhqh/T2M1C0kWK+7Pdst46Y+tPPUv+LH/susBMbWDOBTLcmW16d0dGzixQkeM6Pp37FcveCTiEBqjMY6zIb7ZRcVPtvBqzDlxVoEGkpEklOrwt/Hh25d03guOeJujWdihagQDIiUNx73oeIvRTY0zTNwc1NOU3TIEWVfjadL05Vxd23i8g6JetkQIk1/S/d+wlz9X5rxxf9rj8AfJRyuv4W8CqKNJ5IUY2Du1dVVYmISNM0M7tXVUVVvW1bEZFGRHaZ2VuDanD3t7VtG1JKknP2G264gQMHDpBSmqjqnpzzm0XkHzJ3a/R+ySwi0knCGYIcQsiqmjpbXKWcQgBtCOHF7v5O3L+lbdujg8FgOYSQKAH9T18Yc5lrlyxilbvi7jca4gQtm0oUwhJjKhIT1RifaS1nkA0EqaqadqNBouAJYl3VaZo+ms1pcuLI2KE+q9imdXL306poBXmR0i7WYu0a5AjVNtrqDLJkKOj2BWzddHOmFeAWFR8PvZHYmmMTUZ+a0e+z3mcB2YU1GbERiqOFOSC36M7LgJoZInJ/QFZrz7aU1yGvgzWCuHfuo89Lj9RFGaUHIHrAPBuWEuoZckJCOKtrqlfEezV6K1r28HSS0e3dGSVQUqJMt/S59yt2kSF0duGZIrKJYT/wgQ9w6NChHkx5qqoudRPZX7KycPnywvutzDrr0LyTvIzC4NuB/wY8nyKVEJGRdjfpXSydfept2+KFi2PbtgATMxt0n4m5/66G8DeW8+2HDx/26667js4GJ8a4knP+S1V9DkWtHjJ3uAfKGriIEENwVZ3NkZnFLi6YGGOvi41ijDnn/CKHHxHVX6DkuyquI+DSXmCwaEC5ughTE7m9gL/dAmmEsMShDaeqhzK1/By8Qqrg3kxpNzZAFc8JiYHU2gbCR3OITEc7uDdb/exf/E+cUdEGCy5bQKWt20CiqOG2PD2sf/7jLwcy1Ds4YhW5uBIupuyh2Z70Oa5SVDD4UDDznSPVHdEcT7p4v95yFBR0gGkgW8ZVlnH96u7SRdjWAVXVnJv2U4MYTkgWx6QHyXweWfToUZyhhd6JY28RaxkEpdZAdrs9i76AeQJzP7atQQRfGIl0PxaAcQih6jxWW48aoUizSGGUoz2aOm9KmEwmxBhJKV2y2KdHEL3ddmOpKXZfxQyq503A/0Nh8p5Z+02tZiaIeBfY4GbmZmZN01DXNUBMKfUq2lBEkpmFlFJW1SVVfX1VVV/fNE0+fPgwZkbbtsQYx+7+WeAZXX/6ONdFSu5eu1mbcw6dP3gqIoPyVsXdpZf0xT1q5u7fp6q/37bt54rNyx6KTd/Pe2efSffe9wH3SgwktwLmes03/NJvcuuRMROPydW+FhHcDKpKSFNICTzhBFDuJtT307Y0Iuwfk08kz6TcR96dguaGsAtu4rrHje9547/nD37ih/mGX/9dPvrQCZIu9fbrzn7JNzUjs+yDDwUSF+xYknf8+Csdz7PrtNvN2SMwBF1mkgxXEeAcSgTV1uwd7/aAicht6rTLVWCUx+AblLiQRz8sXlHHxfBZOOY6VTpBraHXgm9gjq72WRt9aFnf8VO8ZkfyI3nl5Fafpr1F+nPgYO+P7Gk4HPaBA5G5+vJIqWKWqcEynfQC/hL4yW5S3gH0WR29bSciYiFU1rZZVWMQCat1PXygroeH2zYPQANoNqM1YyoSYlUNUI3RXVJKdjVwSZd72gdVEEKgqqqXq+ot3T3p+lUz3wVBRNbdhbbNVNVg6i4DUKuqgbtLApWqGohqbM1QkWAhVLvNeLpolJQ9UQ6F5S1zbcXP4ohzG7Bm5rTJwWsIy6xV2zmcKkzjgHZ6EWkKlhB1CAFCoFraBkKL6p14HknQCgkDrepqfZorq0d1G6Vuo5/0ykHqHKinatWUrKbCODknqCFu4zgjDm44WSLApbiGzg7f6gZS4AHgwWiZHaEBW9/k853JQRlA3MnLfuW3ue/AUbKbUMyFHtibCaj+jaiKiHzEkucnnLOL//LTrwLbDzZhFmT/6MT3ABB7HaII2RZswjt+6Wd53i//Vw481AL8V+CFwL9gc+zn6NHqhGLB2yYVnMO2SpKGwhy3Ar/k7qysrGyKcppOp70U2Qk8Y0uwRL8RxxTnev9ZC9wAXE9Z1OdQ0OElygH1UxQm+RGK7dyyGVVPQO5qH+1V1d8QkbtzzmNVXanr+qtTSj/q7s9X1RJWJ+Jt24q7p6qqwnQ6DTnnf+zuf+fuzUK00oiCSH5H18fHL/T7DuCtwIeAKCLtaDSqmqYhxvjdwMtyzsOqqvpJsJRSBTTuHgAJIXxFzllFpAAq87YXEfUyVrGPiukUDJVIWfYlJjoiVQEPdhHJzir2ouGtw3QMXQAKOVfk/A+o6/cJquB1bpJLVedJapOIqPrJUTcz+SeagSUX+TYP1acnOYMOmeqIuHwGrYcaeOrCOs9duvM9chewGsQl5qnTToQZpmYdgiQFw9FlJrrMRs54LWqLwRhdq8y1SyznDYVPqsNSVLCN8vJss1l9FCnOAvcNkFxOn/HhEho4px+mbJTvBC6inPqRh4kmnsUAS9f4zETach0Q3PavDKrV6PmgnGwZb1DU0V8DjgBs3759FnrXB0l00Um9amSqqmYm7p66kMJRN8pEYdLXAh/s7jbq7vNE4E8pcbP3UPyyr2HuqukHkbq/4u6vEJE/MrO2bVtVVQOkaZpPhBD+SlX/u7tfBpBSshBCzjkPmqaxqqpExV/q7m+o6xoz48wzz+TIkSPrZhYGg8H9TdO8Anh3189/BfxnoME1ArlNrbdtK3VdIyI3TiaTG4E/0M5u6KS2iEgUEe0iopoQgoiIerYnMddm5varWKdp2CcFY2UwAgvATl7+ht/jrx7cj4Wd6l49TWM4w1I2cpZYBXwwpKqqEjJY16jqTjMuC3WFteZei7o1iHSpQXISv5ZOlIM3qyPm4UROSl0NINQkBA81nmwbrk/q+u4nxV+UCoR3iUjrKmrghKCzFHfvkbb5jhStMIXkDBEuZuEwkzkAqIBoCLfbeHq8qobdVi9e51MO6FGgKB3OXIDBCpbPBtvBxBWb33cA/D7wNvoQrSKxTlbSu8ZEhAEN23yNAZMyFVvMSXFQyyylg2vnrWxbDTZ50ck+K10FP8JCjKv0dqMZN9xwAwcPHuwBqks68KVvpGe0nskiZfN/K/OaPT1SCiVg4hrmAeQ/xlxd7k/VGbNSagn9cdefuHv37hBjzAcPHszuLiGEjaZpfrKqqhs7JFsBVLWvkRTM7DwRiZPJJD3ucY/Tq666ym666abB/v37m+l0Gtz9/SLychE5ZGYfEREfDAbhjG07fHl52bMbquoPPPAAbdtWMcY/VNVX55yfmFKyDrr2jnEthBBSSoOUktd13QcELAb8L/49DtwjWNi1fSVffsVVEC+g1SWyEJJlJQ6+BvdYVZWZm7ilcoAWjcdJWUxyIueYRLyO0acbk6RVxKwNEE4f2iMCZmqu74+qa2Zd5DFOiDU5OaBnMddANm2wEkAljbh/PLgx8MSOCvCxbColSieVJUJYZuqVtp7MkAHoE9h8mM1+ArhZe6fSri/lxLINgDRHYh5FVbinGK04qkSBuINve+OfcE+zk08dWMe9CiAucztqDHyue/Xd7iLzCr4zy40Vghzfb9/2gvPD8PjnkOIKEsBCCGJmA8XTQHJeCTvYJmNimz+tGNld5nm6ZqDkbFx44YXzmFgvbighYBmKuSHPpcty6Eyw4ukyk6qqorvvBf55P9l1XaczzzwTVZWDBw96F1F0uBvM83LO30Zh+Gn3t5eyCvwH4M8dNzNj+/bt6SUveUkaDAa8853vZH19nel0muq6vqNt29uHw+Gl0+lUOsmXATEzxGU5hHDmoK4OqkSNobYXXHZ5c/3119P1Kbj7n7qDSkREWF7axotf/GLMTTUEhsMh73jHOySlRNu2TVVVR6bT6RNHo5FNJhOGwyEpJR8MBjqdTlHVfU3TSAhhjyKXLmyvGcN2e3m/FE2jhFp2VzTm3fRr6834Eo8DFEFCKDs7BJq2gbqCtgWXqLHC2kaSm1K87mAunBYTLAwlRVH4dAjeVLWQpAUSqW1pplOTeng5gp4qsrHsS62D5ztWNHLJWWfyn374/xTSAfCpG84MbwXKOb3CcVuOydtGRM6jAE6Lc9Mf3A7WItwWbc0v2bPEO3/ku5S8wdbD4NGk2Hc2ewW6jaPxbO54YCxIpRqDZbfLKXbOMyj+zX5xezS8B6F6ykBw96b26esuXklXrqTj1+A6Q2xDCNnMgmLT6O02xU+UvvgQyO6+DnzI3d8VhENAOv/88+WKK65YVLT7U6IPil8Rkef3ny1eA0U1rOv67TnnaR/Evnv3bl70ohfRtA03XH8DR48eDTnn3Klir6CELSYRGSy01xcj+3fARERqd2d1dZXrrrsOd2ffvn2zROSc84kQwsHpdNqj2AChqqpiJGQL/bzknFPvcxYRxuOxDwYDzTmLmTEcDiXnzPHjx2f3ClVpc//+/bg7dV0HYNvy8nKPOKOq3qUN6mAwWMs53zocDqmq6itym5Y4uVh46CbwYxRb2kScvshwdiObGIFtVNWTwWhyotJA27SE4YBSh9wyIYiKquUsUZSUkpTgOHNCdNwWPBQnb1BVldy0dyRLjSrqWoMH2uSEWEkWns7DZ57cR063Dyxz7tIAfK34SbfkmeIKIfCNv/ZbfOzwGCuOgq+kuAQXffP9HjBggvvfjKrg23UKvibQzrTOTRvwUaJY0hYVwjLUK5yYTnExb1JWDbwelR9+BO30EyYz/Rqy4G+qSc8a0n5LnhnLoKaIWRfYbeT5EZc6pBdRvkVUfhTn24G/6Rhnc/aNO5PJpHc6n0PxxxnFtgRwEbGuKuD9bdv+iaq2qpr37NnD1VdfLR2z25VXXsl1113nDz74oHTx0t8EM+bvOzihrMN/psTqRjq0fDwez5imZ5Q+iN/dB12gA4DH2AeJOUF1qqprKSUOHTok119/vUynUz906JBUVaVd2GJS1VlwCMC+ffvKFMjcrVUXX1Ktql8xHo/pAjkYj8e+tLTUg3P7qqq6H8jT6fQ5cR4VuLgpe1vtVnFsMCxZP3RVVkII6p7N0ScSuYTpFI81HgEZdjBOdrIZ4i6iRNGiK2ksu34W/AazSJ6THHqCWxjUdX2754lYhvVGufrn38jth47gYeCGPMVPXzYF3O8OntfO3zmSd/7o99G7c8pyLMoeIA5Io+0cbsaWqgjoM7a0NnfXQnBhFfc7cs4MwqBEXPQBBwK+WXw/KhSLKhFAlviuX3gD73/oAFLvYVDFV7TJfvDz1JLtZ70fRLXwuYlbiGKoJRf31l203ExbMRMH7Vw/thBO1ogIJY2DC8j2VuCaAwcOHNy7d69feeWVs6iQ6/bu5fix1f7/l1DAowwsxtR6F230kZzzMSCce+65vPDyFyKIS5FnmBshBA8hYGYvptjpicKkPWA17P4+j8K00/4+g8Fg1q+eIQHc3UIIT0kp9Z+JmXlVVcWVY3nSIctLqjr93Oc+12mVwTrUeARcLCLPdvevcvddQNXFDatT1NW6rvtE94G7DwaDUgih0yZ6GxYz+4SINN28PLcLI4Mt6GdHtxjOGWecweVXXQO6o7hUUq2tJAWeRuuBEBzL0mYpaZ8l48QliIpLsLaRECqqqqLt0zI14GLMJ+rU8kixg5jcFQw555zz2PszP8IVv/TLrE2OkwejMx2/8GF3KNyiJNaO7JPv/rVf4K0/9PWbDqZNZMaGOQyHVg4Unr8wH/3pMoennPskxKNVVZXPS7KDA6j2qZ2PLv4UyxaKBc5miYlDxlfaZvKjKkGQhy0rEdhs283aBR0DoY4hV5HGXcVdghcjN5Z4U9WtB4L3a9hNpxSp+fK2bd/UR1/STVpd13RRRIjIs+kYf5E6qRzc/ePAIOds7p5jiH2qmjuOFmOpeLhEvs7nEdi9+2quRRQ3wlMpAR1lIAvBHH3COzBLh1tMaVNVLJWNKyJ3dfM3Tin1mSCklC4Wke+i2NxniMgZc6lArzoHx6WvWdtLdChM3IFcfWCHxBjd3W9NKQVgKYTwZNnMpIsmx2HgPkDjYGguEXSJb/r1t8jND7Y6pW4FnuWuoJWjSVQVaw0NEIKi+NjdP9jkDBJJuUXFSZaRGCC3vlAczDfbswUNdWs/FSQcUlPqOABRpKrRqsaQZ4Hv5pQ0c1d/RFXVk5Ga3Eu8k5hVvaDVIsJ4OjGpqhVKQEZ/fQ88LXbyb7xNntuWWG1TNDgukB2bbZ/ApsSCL5EKwxKAmhSGJG/JLmcheoEJUU5/RCwiiosT0KceCTA2s+TusSRtq/dROCV0cGYDz1btpMCkUgfouaqqIYS8GHPZu3MoAQXPAHrfosCs0lyQkl3zKToGM7OQcsqCiIi4inLdddeFAwcOOHCGqn5NznnRNl8c32xzu7t0BcDyYijkgtpuqmqqGnPOVc9MOWd6VdTdb6X4aBPQqmoN/LS7/0vgLHdvuuuaxfnxQia6ab7EzBSYtm076DQG6bKWtItR/shwOEzT6fRSEdmNe2ZzWZV+Y94NHKAA+eaiIDXjuE2PtSfIlQA8rYpVTpbFs4vlCdVgCfNEO5kSQ7hLRL5uGGtCSsQ8pY6ZlBuCDiCo9wfu5jku86cO5CwjVT9/92498dA9POs1P81n9h/GZAlcLkV0+WEiilrgDsHs/LN26tt/quCNxc23cDsJGBV4oIzTQeySDoEGTt6npX/6IVVh+2iENqvAhp3Ul0dbJe5gPdAa84p6WGPmhtAiDDfnyW7uCpuZtV9oB9riDFcxJDoxOJZL9I3EjIhLF4V76sTlWaxKd3f3kz1ss8oOIrJMcU/0vtFZ/zpV+2jO+a4Yo5111ln60pe+lC7hQXC8Pw03NjZyVVUXicg53S368Z2qk1Kcrj5j0C6mt48HBtCmaUIIYaKqVV9aJ3V4R0qJWFd3isi0m8U9wJvd/eu9r4c0D5PsJ2JzpY3us4VkAxORpf7apmkyZSIIIWyEEO5umoYQwrPG43EcDYZbXToGBHHuBE4gMlDV1GETAqZ1XTOlPdvh4raZaFXX3ppBMSc6Z6iQEntjCDG0LWeFzAU7BuxaaiFnCJFQ1e52UlmYftUd8PXjJ3zHUuAPf+6VfMcvvoGb9q9yvNpN91ioJ3ISbdqvdwP7JLdsj4CtC56L/6CXmQBSTEJ0hXGbGNUDNjw/W51gcloGyKAfEQucs307f/Tql0Pa73hxqMQYSfPDaL6jv0RJGwlSjGVPUpGFVjKqRyEfpvh0Rqd5xMLWTdyrVpHiZSlosUkws5L1IAR311hUu9NJsK3/r4CbuvC9RR9rn+vqlMDvx3VSqoBWmyX1UXf/u5xzqKrKJ9NJrwVkEWHvdXv16NGjVFWlwKV0oXrS0Sn6N5uDjhE2FUjrKkMIQJcIMOwimPBsM6au6xrDP1jcOyxR/Nwv6aRpXxLTe8CqH1MfEbUwD2XS5ibD7PPOJu/zbPe3bfsQMDKzi1dWViy36VSHUQZu7wpwy3C4VDacBLHycCscvRDYhTqe29n9ctOiMYJEqap4W0ieRjbmqecO+fNXfx+wBs0GXcXMghLLYgLt4i7IHdu2YBv80Y+/ksve9Gfcsr8hFdT6qx4uXlewuzXb6kqlOrKJY2PBy5PherDOzEpGZdjGd//m73Lt/fux+uwK57nM89q2qsIASdzuJRnbl4ZC3nCx9dImbGbWR5GiaBQ3U5p1tnmrwzDIEV0n6K8ly2+ic8TOmbbfcICIQbZuKEXP0M4GFd8wkc5G1Sl4oKisAiXkVIotttifHi7H8XWK7fYJ4M3MwC0zioEjObfdXvavFJHThUoKcJu7N12c7qYb9qBMXxOJkqpVMy8FspUOUlTFATCdPRawP7F770f5PKemRZhV1Rqo6lo35u1mdrsLkw48+il3/5oQgrl56JhSRGXWtKicMLN9QbXp1HnNObfAUESm7n6Wqu7qmds6AEREZDqduojcrqpTirvqaSmloRYAajYd83UI9whw7vnn6XOed5kgIyeuyOGNdZ8Y7jE8DaESRHLJSMYySHd4SCB5Trd70+RLLziTP/+Jb4D2gbK8eeshcTqrayFCTgR8wLByyBmN+vg8D6vkZMa1rG53VmnKgDFDT4611jnsF/ZAh4PKEidyzQaJpLRufOVCY6cSTu9zS81AgbQOuUVcSzLLw2nBJ5VS+sIkbvQmR6IYaZL/46t/iMt++W2cONKkps1vUfzcXNWvziL15p+5BckJc5XuKX4sOJdNANMYfRqDFEYFcHdRVTezgoa4V70PaIH602wbcKeq/jN3Xx+NRpW7t3SS79r3v1+PHj3ax+g+ky5VrpPcW6fsNiDVda2dBOpV96IWL1wvIk/00wATHX1L116f5tac5rpNc7LgHjKZ86A73lDiVf8vSmWJVkpmknsp1YKIWErp9+u6/tMQwl1mtg7kzkaNbdvmqqpSzvn1KaXv7dTiaGYWY3QzC5TD8VZVze5+dgjh8YCIE7Ycmko5lO7qSsVNMFF0lF/xxn8j//1zR9yqXVCSLPpY9E1r2AGLnxFsn+BUNJAOEPwolvoS+b3wgrmOutjIfAJLqtwKxGVOrI/p9swTwc54mLnPArcqwhMfd5695V9/O7Dh4lnUy53nMccVxB08NI40GmIWdlEqTPT75FR79E611JxRJc4QHGuYlSfl4Xn2S6EYiG02h2jQruddOuZxlbByxhnTzx46/PNHLf5x1upFXhCzJdxbtRxHTD16Kqzp5MJ8HHd31SBR3FjOaw/kZnyjCcuCrLm7BmZQ56nGlCmS6wBwK/CXOee1GKNu27acr7nmKii2o9R1rdPpNHQuuGd2v986sU6JUvoYwLZt27jyyit7hj3d0TYDlU4CwAo9QAEzTpzifo+UeslHZ8n/YEpp6O4phBClhBJqbxMDPxlj/A2gR5yrlOa1PTsUOIrIV9d1XaWUUpfQ7h3Di7uHGOOtlGSA80IIF8YY8VIDa3GPCcX2uxfADUOqSL1dTvhI2hhBwgjhKZtw3ZNts7txPTSoh4SgnU+1ZKj54iwzY/DNtKlHI0HP5p+//g94/6EJWUfiYl/Nqfyvcwl2wtG/dSoCAu0x8BPMKxgu3mvI173+9/nYsZpWUnb3i9hcVP1kcr0jeuOX7Brypz/5Csq5C/4og0xbKboMwWt+8Fd/l9/+uTfxF695nVz9ht/x637mZ7n0Z36Wo6sbtwOfAHL0dnud1o+dsxw4Z8mpuwqVxSleFiyEQGqnBBWe+BUXIc3xzwB/SFExTaTURulU43rLhPQhkDOwZzAY6J49e6Rtp311wpBT0hhjF4JInyLWMyJsBsLGwMdERB9J2VP6Rz2cns4GPg1FBMYY2bVr18zF1EU3cejQISaTyczNsoVmLh/Dd6nqi1U19kEXMHMNEWO8KaX0pr7tjloobq3pdDpQ1UZEBjnn5wASQvC+VKt01RVFZAzcY2YSQniqqq60bYs40hcqFxGPMcp0Or0rhJD27NmjV13+QmPlLMjRj7XCxMBUt4FdumWut9LtiqEpU1kFlmebufjZZQagisjJEnbetkAlyBJjXebY+BiMlhL4c8v3pz0zH1S3e7ZVFcsBsA2CtyCKoZ107fdCZBJWODxpyDFW7jwDdPGJ81tvsq7Yh4NnljUDTafanXYcjxpF81Gk2pXujRfz3F9+ez2pR+0nj61x4WteO/z0sWPnZqmjYNFRG9g07pw8IN99zfPV9396eWDjUV3XCIsGdtuhfplaxgyaDQBKjVYpRZdLMIJ7KWOy2J8p8BALWf27d+/m8he+0EVnM5EBa9u2SA/kSRQmOhWJu38GONrbdAsn4Olm9sDnmbNnU57iVgPtjh075Kqrr9p8U4T3vOc9LNjFW8mhR5V5EnCOmXlvY5uZald0PKX0FyIidV2LiLiZDTp7lfF47Ko67cyAb66qqu4Zvg/MCCH0TzP4dM75YGfDP7u7xrFSZmahYgZ1XX8E0CNHjsS91+1tJqNd6XPxcfrrf/oBqM5zJz9JkO2b5nk29pkK+fHgWVd0LIO0UYKPi+NgfprOge6H0SF7dDXRpDEmuCE1wlMoRm6Y8dNm+/CjwTN7Rsq7fuRfQm778PK+nyeRuCOitbl/rTBLED/pxFXn05jfv220RIxaUG9OodY/LH1xaHEkrsirfuv3uG5/E+5vx23SsVRLw2/aOLz6SqnqSwvejQCT6M25S83xn7twmD7Z6OrbRr5xLFjYZN/O7ROgqB+90VIc/XOGORXSkCm1k15LUWPHm5LVfaZMeR8sQMnV7eNht6p2AtxOSSdbtEcebmb3Pcx3AN9PCfyvgebYsWO+97q9p5Swi4EMC3QZ8I2UBxH/1xDCxWaWVbUxs2FXKWJW7DvnfKRz40jO2d190qPSXS5u2zTNnsFg8OrO1+u9VI0xzsIkQwgfdveNbj6fUte1pJRMOWVu26fpUhHvvfdepkvrPFg1lserIbJiw7p6VktV2emzKyfAnUrioj3b+JPXvAo8dZL0C6Ju5ygMlmjiAKkcVC5ga4TTyXWxbwmeZNBM5BWv/wV/8w/9I1+0meHkx8B0u3bN3Z/um0NSt9JnJKe1M3cMWeJoiU1+WCjj0aNIHLVHMxxLkzoNtk1a4g+0bfo1qqGC1XRV3DtgYeru21NKw9y0kr3ZpVJtarCMcBZEYEGkryuiIothU6d0SCnwYkro3zXAbUeOHMkf+uu/5nlf+5zZLf7q2ms5fPhoiUvN9mxO4dReoNsBhqOabC2IbakjedLP7j1FG4tMfgnlIcLfC9zRti379u2buVr6qKYF1ftCSlTUFcDXU0qKLgP/kGKvX9CVMx1VVWXurgt+XEII3+vub6UDmXLOAzObdvdrc86X1nX9GznnJ9BpHx24R9u2dEBbbprmI6pKV2Pqgr4w+Wm25IuBD4KsD0crtJYZpRPsyIdpp+JR5Vknwnad6sj73POZ4V/+fFrgPiX7jtqNtM6WMreP1PYXsOIn9WVO+DJZkoNfCmxDKOUGT2bWBHpnIPvZ26K/+cdeKacqs7vo2ReNaDQStgv8fOCU1qiAifO3weHMyuWP/vX3OvkAWClGcvJvvjRUeCtFwhJhuFIl3aBtpxcwrF5PYoRo7l0LW+4uIqLD4SCMcsJOx3fl+Ar4ltrHJaYuUXygW388oKjF24D/G3hu0zR5Mpn03wuUwuEpJenQ1od7nsoU+FtARqORv+QlL+ntqFOtRf/Z/Vv620XGbJqD51CQ4j9W1duAiaqOu+ijFVU9hwJa7ASupvhUt0YT7QM857zaMVHvm54Fiaiq55yf7u43hBB+x8we6pg5A+er6tNE5HuAPWY2FpFKVTWlJKoqVVWpqkrbtinGeF8IARFZiTHu6Xy3bikvjrFf65+kHDCfSikFRLYt1fnf/5N/+OL3nfu8Jy3/xBuuf4YExZNvDUrtjFT7rJsfi9ZIbBpgAtoHAT3iDTsXcRL5zt/+fd7/mVUSEXGeWQzGGbNuRXKPAfeIG0sxgJWyXTOVuC9mKKG8tCJpoKSj2NcCu3y+1lspI3YTOEuVCpMjLvkEj3bM8OkoYpGmMQF1GQy+1a2NSCAiiIkYXQ3Kwlul1IjQmDxM/axT0tzDwckbeJG6Mi7ydHd/ioh8dDAY0En6TtJp35dtlPKWMPOCbrrhIcRuDTHKcDj0UzOr+VVXX8H1119vDzzwAO72YVW9xYznpJRSjPFUTvM+Kf6b3f2bAck5z67bUnNqsXjXmPmzQi8G7jSzg50vuO2Qdgsh6EIUVwSeY2b/SURmzwvqwCMW1N9RZ/NKr553aXni7odF5A4ziymlNVX9lLs/HRBF+kNU2Mx+zwN/XqycOghjeM+Dh0/wb15/7eOP1XvOdq+LUwjVeWSSGUIW9w+qJLaNRJd9NdOubpWw3Yot8MNp0VUDCX4sV3KCYXle1OYc1WJrSrcmrgJ8AuEhVBYLyZ9MEkBHoMucaDOtuIro19CtA4KWB1gVJF1Kzd1GNdxNdCHqAEtjP2WR/IX+P4qkGEHQRjUmb3PAiJi1UPxfD3M7/0JfC+6ch3st5l09Oed8EniTc+431vnAed3veuRr8fcHVfVI932vpp40pJQSdV17zlnc/VDO+e0i0lRVFTsb9FTTIBQ/bF8q53Qbo68Unym+4q40H18LNCsrK7cNBoNpV3GxH/8sCqd/GsCW6Cbp7dO2baV/JlCftTMej/swSenU4LtF5D4z07quXURuUVXvytlk7x9kNH/Nir2rqqXU7EPShz5z72dTqpeekKZhxbVynT+6w7ykoyegVrgtIJy9fRtvf81PgJ0A/xIe0K2BDRNaNLmwk+ID7it/pIW5770MHwNLlrLknGcHubvT2S3lKlPQJV72ht9k/+Ejw+66izukZHHNbZY1J3Jv27aHpCR9TMpnX/zQvlBSlGwaajwkPGTCQIhDTYhmPXkTmsyczuIyO+VOfrmU1+m+P/2rD7RIwD1e4mRrupP0+htuYHV1tcPSeSbzOsMD5oW2q65S/G1QGLI8AiXb5n05X5PJZOIXXXRRid8S+W0NfLhNU/dSHb+XqA+HmZxuPP1h0vt++8PkG4Gdx44d+4y7v7urQeU556obs6iqdEH72tm2amazaLHBYCBF+yiUUmI6nVKXOkplvcxIKd3eM3tXV+rtItJ09zud6wmAtjVU9chnPvuJT9173yc85/R06nooEqzTdBYD4wfAEXG5u7YqnlGPBjSr4Bv0pX9ON0kPO6vuxHmSww7gqzo2qSiPiVZcHddhYSz7BJaHwxgG5XGtzCS4LN6xK7o2DSuMJ9NJEK/c/eJuTG13eeikN24ZEflrUU6kdorl1hE/vXLwGJAChBDKw3VF3ktmTYqBY8xr9nYvZRaI5NJ23z9ar8Sc4QDucPe/7t7P1EoRYX19vZewT2XOTH2dpP7UhVI4rn8e62mVhRgjl19+OVdccYWfdVZJ0BCRV6rq35rZRnfZIgNuRaJPt+f6+/Z/jRJF9C4KEj4eDAY2nU5/A8ij0UhFJLl77qSfqaq5u6mq1XVtIQQDckqpnEBmlnP+RM7ZQgjTLo920kmWPlHgLjOrY4x95Ykb27Z9Swih6SpSnG5qqOs6SRx98rwnffX6a1//MzQpPxUNnudpNqGorWWexLldnHtym6k1bKCgtFsE1iOlAKyUoPxpgxSs8IkLX0J5tmtiLl1bxG4PwmS5ZjJkLPgakIrtuom7IoSRbngdNAygFN3ri65tnZSWlLCUPlkFJXojNJvLpf59kOLgbQOWHbe7iP46sDVginksNsqMUxcpPsqvXrL2auEPiQjD4ZB+k85uPK9o/4JT9MeYlyO9wcz8rLPOsv7ZqKei3hecUqKqqtypk3cD/yCl9I4uFLBnzFPZtFtpK1MfA95HeeTHcymPP/lDwGKMtry8fEvO+Z82TXMoxig557bPo51Oy0MGcs7Stm0vaUNd142ZHco5f6+739gFVdSqKjnnIZSaUZ3N+3ERaVJK3sVeY2bfn1J6W2f3npZp3b3asPDXnziA/8DPvW27DrY9Q8UFkXoxKxLoIedPuLuEUGnTtnxJxe9lAOEsvvuNb2b/oVXUE4K9hPkhOKU8rTaId09xEI4g/rfiVp27c4m3/+tXOHaA8oSZBfzTvbiLdGQTHdm4aRHsyZTCBSV9DV08bCtCyLh/tFYZnL1c5zNr+Xtn2Eg+Xo183G6rB9Vqk3P05rcstZ9uCT/sEi+ePbS5bL9Fn+tDj1GfPkCpl3Szqsru3bu54vLLZyhgF4ssIYSzKCrYA8ylbC8BI/Ag8Omcsy2qjaeihZxMadvWO1/mUgjhsOX8PSLye5QawVdTQjT7YuOL1GcANZS5uRO4O+f88RjjTcDdXW5qjDHK9u3b/fDhw3kwGMTxeCxVVf1527a3AK8aDAb/ZDKZXCwi1UJgSTYzCyFMzeyupmneAbxzMBgcBV7Wtu0xL2V0pAsk8xCCbmxsPLC0tPTxHmnvnvvjo9HIVfX7N9bW/zKE8B2q+mQzO49iX68CQxfUxcXj4IPHU2Vh5fxzNAyGAg+JaupAMmf+yJMxcIeSw66lypdlAvLooKeBWfL+hRRpukGxISNiAddWnNqxW3A7UUvbroQAttr5SeksNJhVCpTAd/zqr4cP379fnGVz9yVEJl3biwd/AgYa40Nm/iBp6uecOdA//slX5S/JNv8iKJLuy2979ffy3J//o3YSB3LmCD8+nv7Fvpb/kaU8x2/BqVF1g4ECmjwW9ACAu8toNCrauUj/kJ0egQ2UZ6F+O7OTFmFerqa3O49IV+/o81HnO/VrrrlGbrzxRj98+PDGjh07OHb0+GA6nX7Y3T+sqiuUkppPoLhsGubqdwaOUtw1hyjFy9qqqlJKyZaXl3X37t1CidLiqquu0htuuIG1jXXrirP5aDS6f21t7ReHw+FvDYfDM6bT6YWDweCCTt0du/uBpmnuHw6HB8xs7KWmVaiq6p92QRajqqo8xqjunty9HgwG7dLS0mrOuVZVW1lZYX19Pasqw+FwZCm/O6X0P1JKy1qeSbR4KFubko2t3TeeDBRZ/mSbuYZAEvGheaYLc5sCA3Fq4IHKpunCkcuf/dgrO//kF0k+hXyAt/749/DCN/wZnz2QcPSngJ+jFHt3cBeXHVrWImbnAfW23VUbK94WsEsMXDf7x11BFI11NmmohgOm6Nsohdv7Kpn9zlegdfdpjPGArx9nV2CZdGL91I9RfewoYseNtMaZK0vD8Wjb5G9/7idGz3jda9v9B5sxykNb5EjF3FY4veHzpVMNNKPRiKuvvnoWdCoiAxGZ1nWdc841JUi970vf0z6LZgKb6yudjhYXMoTg11xzzWDv3r3TF77whfq+916b9u/fX6lqotTp/Xj3UjafwFtvIoB0Tz/XnTt3ctkLLlv4Urj8isutqmv+4i/+Iuacm8lkwmg0so2NjcM7d+5cnUwm9/YRT2bmiyVxOl8rgNV1ffz48eOTpaWl4cbGRjsajXKfb7t9+3Ze+tKXctNNN/lkMpGv+7qv413vetdgeXm5ufzyy8d/9d73yYEDBwxYU9W1rbHWppbruqYEyPgI+LucUoVgaOhjbY3ugdkuECSza0QkJGPS9mrlF0EZWIMwZVAFN89K0Zwyc3TYgYfEtfJOoKgb2wc173r1v2IGOgG24G7TEDA33v6a1/D81/17jhxq6MbxKTYnh5ScuZRjGNSNpTwKbuPK2wlp8veuEv+/KJWAHmLCGKoAAAAASUVORK5CYII=" alt="REALFIT" style="height:34px;width:auto;display:block">
+  </a>
+  <div style="display:flex;align-items:center;gap:16px">
+    <button onclick="toggleMenu()" aria-label="Menu" style="background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px" id="hamburger">
+      <span style="display:block;width:22px;height:2px;background:var(--ink);transition:all .2s" id="hb1"></span>
+      <span style="display:block;width:22px;height:2px;background:var(--ink);transition:all .2s" id="hb2"></span>
+      <span style="display:block;width:22px;height:2px;background:var(--ink);transition:all .2s" id="hb3"></span>
+    </button>
+  </div>
+  <nav id="dropMenu" style="display:none;position:absolute;top:56px;right:0;background:var(--surface);border:1px solid var(--rule);border-top:none;min-width:240px;z-index:200;box-shadow:0 4px 16px rgba(0,0,0,.08)">
+    <div style="padding:10px 24px 6px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)">Standards</div>
+    <a href="https://fitdat.com" style="display:block;padding:10px 24px;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .15s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">FITDAT &mdash; Open Library</a>
+    <a href="https://realfitscore.com" style="display:block;padding:10px 24px;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .15s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">REALFIT Absolute Score&#8482;</a>
+    <div style="padding:10px 24px 6px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)">Demo apps</div>
+    <a href="https://scoremyfitness.com" style="display:block;padding:10px 24px;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .15s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">ScoreMyFitness</a>
+    <a href="https://scoremy40.com" style="display:block;padding:10px 24px;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .15s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">ScoreMy40</a>
+    <div style="padding:10px 24px 6px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)">Legal</div>
+    <a href="/privacy" style="display:block;padding:10px 24px;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);font-weight:500">Privacy Policy</a>
+    <a href="/support" style="display:block;padding:10px 24px;font-size:14px;color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--muted)'">Support</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <a href="/" class="back-link"> Back to realfit.com</a>
+    <div class="hero-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-meta">Last updated: April 2026</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="sec" style="background:var(--surface)">
+  <div class="sec-inner">
+    <p class="body"><strong>REAL FIT INC.</strong> (&ldquo;REALFIT,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you use our website (www.realfit.com) and our mobile applications, including the REALFIT SCORE app (collectively, the &ldquo;Services&rdquo;).</p>
+    <p class="body">By using our Services, you agree to the terms of this Privacy Policy.</p>
+  </div>
+</section>
+
+<!-- 1. INFORMATION WE COLLECT -->
+<section class="sec" style="background:var(--bg)">
+  <div class="sec-inner">
+    <h2><span class="num">1.</span>Information We Collect</h2>
+    <p class="body">We may collect the following types of information:</p>
+
+    <h3 class="sub">Personal Information</h3>
+    <ul class="policy-list">
+      <li>Email address (used for account creation and authentication)</li>
+    </ul>
+
+    <h3 class="sub">Fitness and Performance Data</h3>
+    <ul class="policy-list">
+      <li>User-entered fitness data (e.g., time, repetitions, weight, distance)</li>
+      <li>Calculated fitness scores and related analytics</li>
+    </ul>
+
+    <h3 class="sub">Technical Information</h3>
+    <ul class="policy-list">
+      <li>Device type, operating system, and app usage data</li>
+      <li>IP address and general location (non-precise)</li>
+    </ul>
+
+    <p class="body">You may choose not to provide certain information, but some features of the Services may not function properly without it.</p>
+  </div>
+</section>
+
+<!-- 2. HOW WE USE -->
+<section class="sec" style="background:var(--surface)">
+  <div class="sec-inner">
+    <h2><span class="num">2.</span>How We Use Your Information</h2>
+    <p class="body">We use your information to:</p>
+    <ul class="policy-list">
+      <li>Provide and operate REALFIT Services</li>
+      <li>Authenticate users and manage accounts</li>
+      <li>Calculate and display fitness scores</li>
+      <li>Improve functionality and user experience</li>
+      <li>Send transactional communications (such as login links or important account notifications)</li>
+    </ul>
+    <p class="body"><strong>We do not sell, rent, or share your personal information for marketing purposes.</strong></p>
+  </div>
+</section>
+
+<!-- 3. ACCOUNT AUTHENTICATION -->
+<section class="sec" style="background:var(--bg)">
+  <div class="sec-inner">
+    <h2><span class="num">3.</span>Account Authentication</h2>
+    <p class="body">REALFIT uses passwordless email authentication (&ldquo;magic link&rdquo; login). When you enter your email address, we send a secure login link to authenticate your account.</p>
+  </div>
+</section>
+
+<!-- 4. ACCOUNT DELETION -->
+<section class="sec" style="background:var(--surface)">
+  <div class="sec-inner">
+    <h2><span class="num">4.</span>Account Deletion</h2>
+    <p class="body">Users may delete their account at any time directly within the REALFIT mobile application.</p>
+    <p class="body">Upon deletion:</p>
+    <ul class="policy-list">
+      <li>Your account and associated data are permanently removed from our systems</li>
+      <li>Certain data may be retained where required by law or for legitimate business purposes (such as fraud prevention or security)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. THIRD-PARTY SERVICES -->
+<section class="sec" style="background:var(--bg)">
+  <div class="sec-inner">
+    <h2><span class="num">5.</span>Third-Party Services</h2>
+    <p class="body">We use trusted third-party providers to operate our Services, including:</p>
+    <ul class="policy-list">
+      <li><strong>Supabase</strong> &mdash; authentication and data storage</li>
+      <li><strong>Resend</strong> &mdash; transactional email delivery</li>
+    </ul>
+    <p class="body">These providers process data only as necessary to provide their services and are not permitted to use your data for their own purposes.</p>
+  </div>
+</section>
+
+<!-- 6. DATA RETENTION -->
+<section class="sec" style="background:var(--surface)">
+  <div class="sec-inner">
+    <h2><span class="num">6.</span>Data Retention</h2>
+    <p class="body">We retain personal information only for as long as necessary to provide our Services and fulfill legal obligations.</p>
+  </div>
+</section>
+
+<!-- 7. DATA SECURITY -->
+<section class="sec" style="background:var(--bg)">
+  <div class="sec-inner">
+    <h2><span class="num">7.</span>Data Security</h2>
+    <p class="body">We implement reasonable administrative, technical, and physical safeguards to protect your information. However, no method of transmission or storage is completely secure.</p>
+  </div>
+</section>
+
+<!-- 8. CHILDREN'S PRIVACY -->
+<section class="sec" style="background:var(--surface)">
+  <div class="sec-inner">
+    <h2><span class="num">8.</span>Children&rsquo;s Privacy</h2>
+    <p class="body">REALFIT Services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+  </div>
+</section>
+
+<!-- 9. YOUR RIGHTS -->
+<section class="sec" style="background:var(--bg)">
+  <div class="sec-inner">
+    <h2><span class="num">9.</span>Your Rights and Choices</h2>
+    <p class="body">You may:</p>
+    <ul class="policy-list">
+      <li>Access or update your information within the app</li>
+      <li>Delete your account at any time</li>
+      <li>Contact us with questions or requests regarding your data</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 10. CHANGES -->
+<section class="sec" style="background:var(--surface)">
+  <div class="sec-inner">
+    <h2><span class="num">10.</span>Changes to This Policy</h2>
+    <p class="body">We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised &ldquo;Last Updated&rdquo; date.</p>
+  </div>
+</section>
+
+<!-- 11. CONTACT -->
+<section class="sec" style="background:var(--bg)">
+  <div class="sec-inner">
+    <h2><span class="num">11.</span>Contact Us</h2>
+    <p class="body">If you have questions about this Privacy Policy, please contact us:</p>
+    <div class="contact-block">
+      <div class="contact-line"><strong>Email:</strong> <a href="mailto:support@realfit.com">support@realfit.com</a></div>
+      <div class="contact-line" style="margin-top:6px"><strong>REAL FIT INC.</strong></div>
+      <div class="contact-line">Dallas, Texas, USA</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div class="ft-brand">REALFIT&#174; &mdash; The standards for fitness</div>
+    <div class="ft-links">
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+    </div>
+    <div class="ft-copy">&copy; 2026 REAL FIT INC.</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? '' : 'dark');
+  localStorage.setItem('rf-theme', isDark ? 'light' : 'dark');
+}
+(function(){
+  const saved = localStorage.getItem('rf-theme');
+  if(saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+})();
+
+function toggleMenu(){
+  const m = document.getElementById('dropMenu');
+  const open = m.style.display === 'block';
+  m.style.display = open ? 'none' : 'block';
+  document.getElementById('hb1').style.transform = open ? '' : 'translateY(7px) rotate(45deg)';
+  document.getElementById('hb2').style.opacity = open ? '1' : '0';
+  document.getElementById('hb3').style.transform = open ? '' : 'translateY(-7px) rotate(-45deg)';
+}
+document.addEventListener('click', function(e){
+  const menu = document.getElementById('dropMenu');
+  const btn = document.getElementById('hamburger');
+  if(menu && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.style.display='none';
+    document.getElementById('hb1').style.transform='';
+    document.getElementById('hb2').style.opacity='1';
+    document.getElementById('hb3').style.transform='';
+  }
+});
+</script>
+</body>
+</html>
